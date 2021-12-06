@@ -13,7 +13,7 @@ const Resource = db.define('resource', {
     },
     
     thumbnail: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
    

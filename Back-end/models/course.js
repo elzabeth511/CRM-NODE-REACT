@@ -16,7 +16,7 @@ const Course = db.define('course', {
         allowNull: false
     },
     thumbnail: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
    
