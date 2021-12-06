@@ -1,0 +1,10 @@
+.nav-link {
+    color: black;
+    font-weight: bold;
+}
+.dropdown-menu {
+    background-color: #61c761 !important;
+}
+.dropdown-item:hover {
+    background-color: #60fc60 !important;
+}
