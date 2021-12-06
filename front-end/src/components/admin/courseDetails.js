@@ -48,7 +48,7 @@ export function CourseDetailsAdmin(){
         }
 return(<>
 <h1>course list </h1>
-<label>Search</label><input type='text' 
+<label className="mb-3">Search</label><input type='text' 
 name='search' placeholder='Search By Course Name'
 onChange={event =>setSearch(event.target.value)} />
 

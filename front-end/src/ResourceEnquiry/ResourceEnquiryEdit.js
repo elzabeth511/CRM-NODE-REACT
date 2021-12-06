@@ -123,7 +123,7 @@ function MyForm(props) {
                 value="back"
                 onClick={() =>
                   navigate(
-                    `/resourcedetails/${resourceEnquiryList.resource_enquiry_id}`
+                    `/resourceEnquiry`
                   )
                 }
               />
