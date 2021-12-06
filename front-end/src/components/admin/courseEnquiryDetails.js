@@ -21,7 +21,7 @@ export function CourseEnquiryViewAdmin() {
 
     }, [])
 return(<>
-<h1>Course Enquiries list </h1><label>Search</label><input type='text' 
+<h1 className="text-capitalize">Course Enquiries list </h1><label className="mb-3 mx-2 fs-3 text-primary">Search</label><input type='text' 
 name='search' placeholder='Search By Enquirer Name'
 onChange={event =>setSearch(event.target.value)} />
 
@@ -29,7 +29,7 @@ onChange={event =>setSearch(event.target.value)} />
             {enquiries.length === 0 ? (<h5>enquirys not available</h5>) : (
                 <table className="table table-striped w-auto">
                 <thead>
-                    <tr>
+                    <tr className="text-capitalize">
                         <th>Course Name</th>
                         <th>Enquirer Name</th>
                         <th>Enquirer Email</th>
@@ -53,13 +53,13 @@ onChange={event =>setSearch(event.target.value)} />
                         }).map(enquiry => {
                             return (
                             <tr className="table-info" key={enquiry.course_enquiryId}>
-                                <th scope="row">{enquiry.course_name}</th>
-                                <td>{enquiry.enquirer_name}</td>
+                                <th scope="row" className="text-capitalize">{enquiry.course_name}</th>
+                                <td className="text-capitalize">{enquiry.enquirer_name}</td>
                                 <td>{enquiry.enquirer_email}</td>
                                 <td>{enquiry.enquirer_phone}</td>
-                                <td>{enquiry.previous_status}</td>
+                                <td className="text-capitalize">{enquiry.previous_status}</td>
 
-                                <td>{enquiry.status}</td>
+                                <td className="text-capitalize">{enquiry.status}</td>
                                 <td>
                                 <button className='btn btn-primary'>
                         <Link style={{textDecoration:'none'}} className='text-light' to={`/courseenquiryupdate/${enquiry.course_enquiryId}`}>Edit Status</Link>

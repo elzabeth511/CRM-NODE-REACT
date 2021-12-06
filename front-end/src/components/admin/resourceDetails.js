@@ -48,7 +48,7 @@ const ViewResourcesAdmin = (props) => {
 
 
     return (<>
-    <h1>Resource List </h1><label>Search</label><input type='text' 
+    <h1 className="text-capitalize">Resource List </h1><label className="mb-3 mx-2 fs-3 text-primary">Search</label><input type='text' 
 name='search' placeholder='Search By Resource Name'
 onChange={event =>setSearch(event.target.value)} />
         
@@ -56,7 +56,7 @@ onChange={event =>setSearch(event.target.value)} />
             {resources.length === 0 ? (<h5>Resources not available</h5>) : (
                 <table className="table table-striped w-full">
                     <thead>
-                        <tr>
+                        <tr className="text-capitalize">
                             <th>Resource Name</th>
                             {/* <th>Availabilty</th> */}
                             <th>Status</th>
@@ -77,9 +77,9 @@ onChange={event =>setSearch(event.target.value)} />
                             }).map(resource => {
                                 return (
                                     <tr className="" key={resource.resource_id}>
-                                        <th scope="row">{resource.resource_name}</th>
+                                        <th scope="row" className="text-capitalize">{resource.resource_name}</th>
 
-                                        <td>{resource.status}</td>
+                                        <td className="text-capitalize">{resource.status}</td>
                                         <td>{resource.rent}</td>
                                         <td>
                                             <button className="btn btn-outline-primary" onClick={() => navigate(`/resourceedit/${resource.resource_id}`)} >Edit</button>

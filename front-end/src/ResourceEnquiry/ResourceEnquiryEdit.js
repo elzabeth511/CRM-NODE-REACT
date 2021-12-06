@@ -49,7 +49,7 @@ function MyForm(props) {
       <div className="editbackground">
         <div className="editsidebar">
           <div className="innersidebar editinner">
-            <h3 className="h3">Books </h3>
+            <h3 className="h3">CRM </h3>
 
             <p className="p">
               What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
@@ -111,7 +111,7 @@ function MyForm(props) {
 
               <select name="status" onChange={handlechange}>
                 <option value="Not Attended"> Not Attended</option>
-                <option value="rejectd"> Rejected</option>
+                <option value="Rejected"> Rejected</option>
                 <option value="Attended"> Attended</option>
                 <option value="processing">Processing</option>
               </select>

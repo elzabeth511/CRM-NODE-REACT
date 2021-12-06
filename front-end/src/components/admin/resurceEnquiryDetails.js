@@ -16,8 +16,8 @@ export function ResourceEnquiryViewAdmin() {
   }, []);
   return (
     <>
-      <h3 style={{ textAlign: "center" }}>Resource Enquiry List </h3>
-      <label>Search</label><input type='text'
+      <h1 className="text-capitalize">Resource Enquiry List </h1>
+      <label className="mb-3 mx-2 fs-3 text-primary">Search</label><input type='text'
         name='search' placeholder='Search By Enquirer Name'
         onChange={event => setSearch(event.target.value)} />
       <div>
@@ -26,7 +26,7 @@ export function ResourceEnquiryViewAdmin() {
         ) : (
           <table className="table table-striped w-auto">
             <thead>
-              <tr>
+              <tr className="text-capitalize">
                 <th>Resource Name</th>
                 <th>Enquirer Name</th>
                 <th>Enquirer Email</th>
@@ -46,16 +46,16 @@ export function ResourceEnquiryViewAdmin() {
                         }).map((resourceEnquiry) => {
                 return (
                   <tr
-                    className="table"
+                    className="table "
                     key={resourceEnquiry.resource_enquiry_id}
                   >
-                    <th scope="row">{resourceEnquiry.resource_name}</th>
-                    <td>{resourceEnquiry.enquirer_name}</td>
+                    <th scope="row" className="text-capitalize">{resourceEnquiry.resource_name}</th>
+                    <td className="text-capitalize">{resourceEnquiry.enquirer_name}</td>
                     <td>{resourceEnquiry.enquirer_email}</td>
                     <td>{resourceEnquiry.enquirer_phone}</td>
 
-                    <td>{resourceEnquiry.previous_status}</td>
-                    <td>{resourceEnquiry.status}</td>
+                    <td className="text-capitalize">{resourceEnquiry.previous_status}</td>
+                    <td className="text-capitalize">{resourceEnquiry.status}</td>
 
                     <td>
                       <button className="btn btn-primary" onClick={() => navigate(`/resourceenquiryedit/${resourceEnquiry.resource_enquiry_id}`)}>edit</button>
